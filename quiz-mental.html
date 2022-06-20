@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://nsw-students-mental-health.glitch.me" />
+
+    <!-- Adds PWA support -->
+
+    <link rel="manifest" href="manifest.json" />
+    <!--<script src="manup.js"></script>-->
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/726e922d-2bd0-40f6-8bfb-d1b76503d61b%2Fnoun_Mental%20Health_3306335.png?v=1600003798316"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.glitch.com/726e922d-2bd0-40f6-8bfb-d1b76503d61b%2Fnoun_Mental%20Health.png?v=1600273894039"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="js/script.js" defer></script>
+
+    <link rel="stylesheet" href="css/quiz.css" />
+
+    <title>
+      What is mental health? - Quiz
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <a class="navbar" href="/">
+        <p style="">
+          HOME
+        </p>
+      </a>
+      <div>
+      </div>
+      <div id="quizContainer">
+        <div id="preQ">
+          <div id="intro">
+            Answer a few questions and see how well you know about mental
+            health!
+          </div>
+          <div class="qButton" id="start">Let's Begin</div>
+        </div>
+        <div id="quiz" style="display: none">
+          <div id="qBox">
+            <p id="qPre"></p>
+            <p id="question"></p>
+          </div>
+          <div id="qImg" style="display:none"></div>
+          <div id="choices">
+            <div
+              class="choice"
+              id="A"
+              ontouchstart=""
+              onclick="checkAnswer('A')"
+            ></div>
+            <div
+              class="choice"
+              id="B"
+              ontouchstart=""
+              onclick="checkAnswer('B')"
+            ></div>
+            <div
+              class="choice"
+              id="C"
+              ontouchstart=""
+              onclick="checkAnswer('C')"
+            ></div>
+            <div
+              class="choice"
+              id="D"
+              ontouchstart=""
+              onclick="checkAnswer('D')"
+            ></div>
+          </div>
+          <!--Timer not needed-->
+          <div id="timer" style="display:none">
+            <div id="counter"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+          </div>
+        </div>
+        <div id="scoreContainer" style="display: none">
+              <div id="score">
+                <p>
+                  Your score is
+                </p>
+                <h1>
+                  <span id="scoreNum">ERROR</span> out of
+                  <span id="qNum"></span>
+                </h1>
+              </div>
+              <div id="advice">
+                <a class="qButton" id="adviceButton" onclick="restart()"
+                  >Play again</a
+                >
+              </div>
+            </div>
+        <div id="progress"></div>
+      </div>
+      <script src="js/quizmh.js"></script>
+    </div>
+  </body>
+</html>

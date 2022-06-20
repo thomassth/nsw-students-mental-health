@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script
+			  src="https://code.jquery.com/jquery-3.5.1.min.js"
+			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			  crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://nsw-students-mental-health.glitch.me" />
+
+    <!-- Adds PWA support -->
+
+    <link rel="manifest" href="manifest.json" />
+    <!--<script src="manup.js"></script>-->
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/726e922d-2bd0-40f6-8bfb-d1b76503d61b%2Fnoun_Mental%20Health_3306335.png?v=1600003798316"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.glitch.com/726e922d-2bd0-40f6-8bfb-d1b76503d61b%2Fnoun_Mental%20Health.png?v=1600273894039"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <!-- import the webpage's stylesheet -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="js/script.js" defer></script>
+    <script src="js/animate.js" defer></script>
+
+    <link rel="stylesheet" href="css/quiz.css" />
+
+    <title>COPE-brief</title>
+  </head>
+  <body>
+    <div class="container">
+      <a class="navbar" href="/">
+        <p style="font-size:medium">
+          HOME
+        </p>
+      </a>
+      <div></div>
+      <div id="quizContainer">
+        <div id="preQ">
+          <div class="fadeInLine" id="intro">
+            <p>
+              The following questions ask how you have sought to cope with a
+              hardship in your life.
+            </p>
+            <p>
+              Read the statements and indicate how much you have been using each
+              coping style.
+            </p>
+            <p>
+              These items deal with ways you've been coping with the stress in
+              your life since you found out you were going to have to have this
+              operation.
+            </p>
+
+            <p>
+              There are many ways to try to deal with problems.
+            </p>
+            <p>
+              These items ask what you've been doing to cope with this one.
+            </p>
+            <p>
+              Obviously, different people deal with things in different ways,
+              but I'm interested in how you've tried to deal with it.
+            </p>
+            <p>
+              Each item says something about a particular way of coping.
+            </p>
+            <p>
+              I want to know to what extent you've been doing what the item
+              says. How much or how frequently.
+            </p>
+            <p>
+              Don't answer on the basis of whether it seems to be working or
+              not—just whether or not you're doing it.
+            </p>
+            <p>
+              Try to rate each item separately in your mind from the others.
+            </p>
+            <p>
+              Make your answers as true FOR YOU as you can.
+            </p>
+          </div>
+          <div class="qButton" id="start">Let's Begin</div>
+        </div>
+        <div id="quiz" style="display: none">
+          <div id="qBox">
+            <p id="qPre"></p>
+            <p id="question"></p>
+          </div>
+          <div id="qImg">
+            <!--Intentional-->
+            <img src="" loading="lazy">
+          </div>
+          <div id="choices">
+            <div
+              class="choice"
+              id="A"
+              ontouchstart=""
+              onclick="checkAnswer('A')"
+            >
+              I haven't been doing this at all
+            </div>
+            <div
+              class="choice"
+              id="B"
+              ontouchstart=""
+              onclick="checkAnswer('B')"
+            >
+              I've been doing this a little bit
+            </div>
+            <div
+              class="choice"
+              id="C"
+              ontouchstart=""
+              onclick="checkAnswer('C')"
+            >
+              I've been doing this a medium amount
+            </div>
+            <div
+              class="choice"
+              id="D"
+              ontouchstart=""
+              onclick="checkAnswer('D')"
+            >
+              I've been doing this a lot
+            </div>
+          </div>
+          <!--Timer not needed-->
+          <div id="timer" style="display:none">
+            <div id="counter"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+          </div>
+          <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none">
+          <div class="fadeInLine" id="score">
+            <p>
+              This is how you fare with different coping stragegies.
+            </p>
+            <p>
+              A high score means you used this stragegy more.
+            </p>
+
+            <div id="advice"></div>
+
+            <div class="table-container">
+              <table>
+                <thead></thead>
+                <tbody>
+                  <tr id="">
+                    <td>item display</td>
+                    <td>error</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--<p>
+              Self-distraction, items 1 and 19 
+Active coping, items 2 and 7
+              Denial, items 3 and 8 
+Substance use, items 4 and 11 
+Use of
+              emotional support, items 5 and 15 
+Use of instrumental support,
+              items 10 and 23 
+Behavioral disengagement, items 6 and 16 
+Venting,
+              items 9 and 21 
+Positive reframing, items 12 and 17 
+Planning, items
+              14 and 25 
+Humor, items 18 and 28 
+Acceptance, items 20 and 24
+              Religion, items 22 and 27 
+Self-blame, items 13 and 26
+            </p>-->
+            <p>
+              Play this again in different moments can show different results.
+            </p>
+            <p>
+              Compare with yourself to see how you adapt in different times.
+            </p>
+          </div>
+        </div>
+      </div>
+      <script src="js/quiz-cope.js"></script>
+    </div>
+  </body>
+</html>

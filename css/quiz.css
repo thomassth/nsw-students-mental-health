@@ -1,0 +1,165 @@
+body {
+  font-family: sans-serif;
+  font-size: 7vw;
+}
+@media (min-width: 30rem) {
+  body {
+    font-size: x-large;
+  }
+  #quizContainer {
+    max-width: 48rem;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .choice:hover {
+    box-shadow: 0 0 0 0.2rem royalblue;
+    border-color: royalblue;
+    color: royalblue;
+  }
+}
+#quizContainer {
+  margin: 2rem auto;
+  background-color: white;
+  min-height: 80vh;
+  width: 90vw;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem 0;
+  position: relative;
+  display: flex;
+  padding: 0rem 0;
+  flex-flow: column;
+}
+
+#start {  
+    margin-bottom: 2rem;
+}
+
+
+#qImg {
+margin: auto;
+display: flex;
+}
+#qImg img {
+  width: 12rem;
+}
+
+#qBox {
+  margin: 0 1rem;
+}
+#qPre {
+  font-size: 80%;
+  margin: 0;
+}
+
+#choices {
+  display: grid;
+  grid-auto-rows: 1fr;
+  margin: 0 1rem;
+}
+.choice {
+  justify-content: center;
+  border: 0.1rem solid grey;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  transition: 0.2s;
+}
+
+.choice:active {
+  background-color: royalblue;
+  border-color: royalblue;
+  box-shadow: 0 0 0 0.2rem royalblue;
+  color: white;
+}
+
+#timer {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  bottom: 0px;
+  text-align: center;
+}
+#counter {
+}
+#btimeGauge {
+  width: 150px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin-left: 25px;
+}
+#timeGauge {
+  height: 10px;
+  border-radius: 10px;
+  background-color: mediumseagreen;
+  margin-top: -10px;
+  margin-left: 25px;
+}
+#progress {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.prog {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.2rem solid gray;
+  border-radius: 50%;
+  margin: 0rem 0.2rem 0.4rem 0.2rem;
+  transition: 0.2s;
+  line-height: 2.6rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.progGreen {
+  background-color: #0f0;
+  border: 0.2rem solid green;
+}
+.progRed{
+  background-color: salmon;
+border: 0.2rem solid darkred;
+}
+
+.nowQ {
+  background-color: lightskyblue;
+}
+#scoreContainer {
+  background-color: white;
+  opacity: 0.9;
+  display: none;
+  padding:1rem 2rem
+}
+#scoreContainer img {
+  width: 20rem;
+  margin: auto;
+}
+#scoreContainer p {
+    margin: 0.5rem;
+}
+#scoreContainer div {
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+}
+#quiz {
+  flex-flow: column;
+  width: 100%;
+}
+#intro {
+  padding: 2rem;
+}
+#advice{
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  padding:1rem 0rem;
+}
+.Maladaptive td{
+    background: #e6adad;
+}
+.Maladaptive td:first-child {
+  background: #fa8787;
+}

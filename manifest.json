@@ -1,0 +1,23 @@
+{
+    "dir": "ltr",
+    "lang": "English",
+    "name": "Student Mental Health NSW",
+    "short_name": "Mental Health",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://nsw-students-mental-health.glitch.me/",
+    "background_color": "transparent",
+    "theme_color": "transparent",
+    "description": "One stop place for mental health information , suitable for students",
+    "orientation": "any",
+     "related_applications": [{
+    "platform": "webapp",
+    "url": "https://nsw-students-mental-health.glitch.me/manifest.json"
+  }],
+    "prefer_related_applications": false,
+    "icons": {
+      "96":"https://cdn.glitch.com/726e922d-2bd0-40f6-8bfb-d1b76503d61b%2Fnoun_Mental%20Health.png?v=1600273894039"
+    },
+    "url": "https://nsw-students-mental-health.glitch.me/",
+    "screenshots": []
+}
